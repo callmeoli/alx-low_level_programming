@@ -13,21 +13,15 @@
  *
  *
  **/
-
-	int main(void)
+int main(void)
 
 {
+	int var;
 
-	char alphabet;
-
-	for (alphabet = 'A'; alphabet <= 'Z'; alphabet++)
-{
-	putchar(tolower(alphabet));
-}
-	for (alphabet = 'A'; alphabet <= 'Z'; alphabet++)
-{
-	putchar(alphabet);
-}
+	for (var = 0; var < 10; var++)
+	{
+	printf("%d", var);
+	}
 	putchar('\n');
 	return (0);
 }
