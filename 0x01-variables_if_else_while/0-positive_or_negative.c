@@ -1,34 +1,33 @@
-#include  <time.h>
-/*more header goes there */
 #include <stdio.h>
-/* betty style doc for function main goes there */
+#include <time.h>
+/* more header goes there */
+#include <stdlib.h>
 /**
- * main - check for conditions
+ * main - return alphabets expect e and q
  *
- * Description: return the result for the condition
+ * Description: print the required results
  *
- * Return: returnthe integer value 0
+ * Return: integer value 0
  *
  */
-
-int main(void)
-{
+	int main(void)
+	{
 	int n;
 
-	srand(time(a));
-	n = rand () - RAND_MAX / 2;
+	srand(time(0));
+
+	n = rand() - RAND_MAX / 2;
+	/* your code goes there */
 	if (n > 0)
 	{
-		printf("%d is positive\n", n);
-		
-	}
-	else if (n==0)
+		printf("%d is postive\n", n);
+	} else if (n == 0)
 	{
-	printf("%d is zero\n", n);
-	}
-	else
+		printf("%d is zero\n", n);
+	} else
 	{
-		printf("%d is negative\n" n);
+		printf("%d is negative\n", n);
 	}
-	return (0); 
-}
+
+		return (0);
+	}
