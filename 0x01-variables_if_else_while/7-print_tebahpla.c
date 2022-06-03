@@ -21,5 +21,6 @@ int main(void)
 	{
 	putchar(l);
 	}
+
 	return (0);
 }
