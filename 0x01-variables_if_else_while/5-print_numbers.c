@@ -13,9 +13,8 @@
  *
  *
  **/
-int main(void)
-
-{
+	int main(void) /* sonem descriprtion for bettr */
+	{
 	int var;
 
 	for (var = 0; var < 10; var++)
