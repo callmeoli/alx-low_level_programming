@@ -4,14 +4,15 @@
 *followed by a new line
 *Return: Always 0
 */
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
-	int a, b;
+	int i;
+	char c;
 
-	for (a = 0; a <= 8; a++)
+	for (i = 0; i <= 10; i++)
 	{
-		for (b = 97; b <= 122; b++){
-	_putchar(b);
+		for (c = 'a'; c <= 'z'; c++){
+	_putchar(c);
 	}
 	_putchar('\n');
 	}
