@@ -1,25 +1,21 @@
-#include <stdio.h>
-#include <ctype.h>
-/*
- * *ain - return the required output
- *
- *
- ** description: print a to z in upper and lower
- *
- *
- *
- * Return: return integer value 0
- *
- *
- *
- **/
-	int main(void) /* sonem descriprtion for bettr */
-	{
-	int var;
+#include <stdlib.h>
 
-	for (var = 0; var < 10; var++)
+#include <time.h>
+
+/* more headers goes there */
+
+#include <stdio.h>
+/**
+* main -> this is a function to print lower case alphabets
+* Return: success always 0
+*/
+int main(void)
+{
+	int alphabet;
+
+	for (alphabet = '0'; alphabet <= '9'; alphabet++)
 	{
-	printf("%d", var);
+	putchar(alphabet);
 	}
 	putchar('\n');
 	return (0);
