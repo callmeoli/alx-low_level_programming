@@ -5,32 +5,18 @@
 /* more headers goes there */
 
 #include <stdio.h>
-
-/* betty style doc for function main goes there */
-
-/*
- *
- *
- ** main - check for conditions
- ** Description: return the results for the condition
- *
- *
- **Return: return the integer value 0
-*
-**/
-	int main(void)
+/**
+* main -> this is a function to print lower case alphabets
+* Return: success always 0
+*/
+int main(void)
 {
-	char alphabet1;
-	char alphabet2;
-	for (alphabet1 = "A", alphabet <= 'Z'; alphabet++)
-	
+	int alphabet;
+
+	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 	{
 	putchar(alphabet);
 	}
-	for (alphabet1 = "A", alphabet <= 'Z'; alphabet++)
-	{
-				putchar(alphabet);
-	}
-
-return (0):
-}	
+	putchar('\n');
+	return (0);
+}
