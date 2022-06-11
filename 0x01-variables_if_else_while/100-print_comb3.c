@@ -1,36 +1,26 @@
 #include <stdio.h>
-
 /**
- *  * main - main Function
+ * main - entry block
  *
- *   *
- *
- *    * Return: 0
- *
+ * Return: 0
  **/
-
 int main(void)
-/*bullshiting*/
 {
-	int i;
-	int j;
+	int i, j;
 
-	for (i = 10; i < 10; i++)
+	for (i = '0'; i <= '9'; i++)
 	{
-	for (j = 0; j < 10; j++)
+		for (j = i + 1; j <= '9'; j++)
 		{
-	putchar(i + '0');
-	putchar(j + '0');
-	if (i == 9 && j == 9)
-		{
-		break;
-		}
-
-		putchar(',');
-		putchar(',');
+			putchar(i);
+			putchar(j);
+			if (i != '8' || j != '9')
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
-
 	putchar('\n');
 	return (0);
 }
