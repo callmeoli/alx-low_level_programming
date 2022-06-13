@@ -3,7 +3,7 @@
 *reset_to_98 - update to 98
 *@n:takes an integer
 */
-void swap_int(int *a, int *b);
+void swap_int(int *a, int *b)
 {
 int tmp;
 
