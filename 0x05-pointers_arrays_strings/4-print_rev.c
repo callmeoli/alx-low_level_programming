@@ -2,6 +2,7 @@
 /**
 * print_rev: prints a string followed by a new line
 * @s: input
+* main: returnthe result
 * Return: the result
 */
 void print_rev(char *s)
