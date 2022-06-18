@@ -1,5 +1,6 @@
 #include "main.h"
 /**
+*main: reverse an input
 *print_rev: prints a string followed by a new line
 *@s: input
 */
