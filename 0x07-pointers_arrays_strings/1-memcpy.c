@@ -1,20 +1,18 @@
 #include "main.h"
-#include <stdio.h>
-/*
-* *_memset - set char to assigned value
-* @s: buffer character
-* @b: assigned value
-* @n: number of char to be assined
-* 
-* Return: 0 Always sucsses
-*/
-char *_memcpy(char *s, char b, unsigned int n) 
+/**
+ * _memcpy - copies from source to dest values in array
+ * @dest: destination to copy to
+ * @src: source to copy from
+ * @n: n amount of times
+ * Return: return the string value
+ */
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-unsigned int i;
-  
-  for( i = 0;i < n;i++ )
-    {
-      s[i] = b;
-    }
-  return 0;
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+	{
+		dest[i] = src[i];
+	}
+	return (dest);
 }
