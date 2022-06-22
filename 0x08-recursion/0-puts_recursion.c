@@ -14,7 +14,7 @@ int i = 0;
 	{
 	_puts_recursion(s + i);
 	}
-	if (i > 2 && s[i] == '\0')
+	else
 	{
 	_putchar('\n');
 	}
