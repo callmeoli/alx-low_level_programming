@@ -14,11 +14,8 @@ int i = 0;
 	{
 	_puts_recursion(s + i);
 	}
-	if (i > 2)
-	{
-	if (s[i] == '\0')
+	if (i > 2 && s[i] == '\0')
 	{
 	_putchar('\n');
-	}
 	}
 }
