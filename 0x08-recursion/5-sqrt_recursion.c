@@ -1,34 +1,28 @@
 #include "main.h"
 /**
-* sqrt1 - return the square root of number
-* @n: rooted number
-* @y: iteration number
-* Return - the root of number
-*/
-int sqrt1(int n, int y)
+ * _sqrt_recur - helper function
+ * @n: num
+ * @x: num
+ * Return: output
+ */
+int _sqrt_recur(int n, int x)
 {
-	if (y * y == n)
+	if (x * x == n)
 	{
-		return (y);
+		return (x);
 	}
-	else if (y < 0)
+	else if (x * x > n)
 	{
-	return (-1);
+		return (-1);
 	}
-	else
-	{
-	sqrt1(n, y - 1);
-	}
+	return (_sqrt_recur(n, x + 1));
 }
 /**
-* _sqrt_recursion - return the square root of number
-* @n: rooted number
-* @y: iteration number
-* Return - the root of number
-*/
+ * _sqrt_recursion - function that returns the natural square root of a number
+ * @n: num
+ * Return: square root of a number
+ */
 int _sqrt_recursion(int n)
 {
-	int y = n;
-
-	sqrt1(n, y);
+	return (_sqrt_recur(n, 0));
 }
