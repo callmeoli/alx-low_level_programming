@@ -7,9 +7,10 @@
  */
 int _sqrt_recur(int n, int x)
 {
-    if (n < 0){
-        return (0);
-    }
+	if (n < 0)
+	{
+		return (0);
+	}
 	else if (x * x == n)
 	{
 		return (0);
@@ -21,7 +22,7 @@ int _sqrt_recur(int n, int x)
 	return (_sqrt_recur(n, x + 1));
 }
 /**
- *  is_prime_number - function that returns the 
+ * is_prime_number - function that returns the
  * @n: num
  * Return: check if number is prime or not
  */
