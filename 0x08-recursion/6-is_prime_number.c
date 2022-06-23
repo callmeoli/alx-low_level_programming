@@ -1,29 +1,31 @@
-#include "main.h"
+#include <stdio.h>
 /**
- * is_prime_num - helper function
+ * _sqrt_recur - helper function
  * @n: num
  * @x: num
  * Return: output
  */
-int is_prime_num(int n, int x)
+int _sqrt_recur(int n, int x)
 {
-	if (n <= 1 || (n != x && n % x == 0))
+    if (n < 0){
+        return (0);
+    }
+	else if (x * x == n)
 	{
 		return (0);
 	}
-	else if (n == x)
+	else if (x * x > n)
 	{
 		return (1);
 	}
-	return (is_prime_num(n, x + 1));
+	return (_sqrt_recur(n, x + 1));
 }
 /**
- * is_prime_number - function that returns 1 if the input integer
- * is a prime number, otherwise return 0
+ *  is_prime_number - function that returns the 
  * @n: num
- * Return: output
+ * Return: check if number is prime or not
  */
 int is_prime_number(int n)
 {
-	return (is_prime_num(n, 2));
+	return (_sqrt_recur(n, 0));
 }
