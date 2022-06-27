@@ -7,9 +7,10 @@
  *
  * Return: Always 0.
  */
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int count = argc - 1;
+
 	printf("%d\n", count);
 	(void)argv;
 	return (0);
