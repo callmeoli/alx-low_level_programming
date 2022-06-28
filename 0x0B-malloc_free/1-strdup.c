@@ -14,14 +14,17 @@ if (str[0] == '\0')
 {
 	return (NULL);
 }
-int i = 0;
+int i;
+i = 0;
 
 while (str[i] != '\0')
 {
 i++;
 }
-char *ptr = malloc(sizeof(char) * i);
-int j = 0;
+char *ptr;
+ptr = malloc(sizeof(char) * i);
+int j;
+j = 0;
 
 while (j < i)
 {
