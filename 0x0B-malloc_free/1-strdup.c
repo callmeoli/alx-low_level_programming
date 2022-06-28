@@ -35,6 +35,6 @@ while (j < i)
 ptr[j] = str[j];
 j++;
 }
-str = &ptr;
+str = ptr;
 return (ptr);
 }
