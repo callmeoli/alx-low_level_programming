@@ -14,9 +14,9 @@ int j;
 char *ptr;
 int i;
 
-if (str[0] == '\0')
+if (str == NULL)
 {
-	return (NULL);
+return (NULL);
 }
 i = 0;
 
@@ -26,7 +26,10 @@ i++;
 }
 ptr = malloc(sizeof(char) * i);
 j = 0;
-
+if (str[0] == '\0')
+{
+return (ptr);
+}
 while (j < i)
 {
 ptr[j] = str[j];
