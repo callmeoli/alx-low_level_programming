@@ -24,7 +24,7 @@ while (str[i] != '\0')
 {
 i++;
 }
-ptr = (char *) malloc(sizeof(char) * (i + 1));
+ptr = (char *)malloc(sizeof(char) * (i + 1));
 j = 0;
 if (str[0] == '\0')
 {
@@ -34,10 +34,6 @@ while (j < i)
 {
 ptr[j] = str[j];
 j++;
-}
-if (ptr[j] != str[i])
-{
-return (NULL);
 }
 return (ptr);
 }
