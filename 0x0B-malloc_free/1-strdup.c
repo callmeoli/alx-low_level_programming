@@ -30,6 +30,7 @@ j = 0;
 while (j < i)
 {
 ptr[j] = str[j];
+j++;
 }
 if (ptr[j] != str[i])
 {
