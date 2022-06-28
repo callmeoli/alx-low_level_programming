@@ -10,20 +10,21 @@
 */
 char *_strdup(char *str)
 {
+int j;
+char *ptr;
+int i;
+
 if (str[0] == '\0')
 {
 	return (NULL);
 }
-int i;
 i = 0;
 
 while (str[i] != '\0')
 {
 i++;
 }
-char *ptr;
 ptr = malloc(sizeof(char) * i);
-int j;
 j = 0;
 
 while (j < i)
