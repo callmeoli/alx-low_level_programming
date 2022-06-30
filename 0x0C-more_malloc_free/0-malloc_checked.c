@@ -4,7 +4,7 @@
 /**
 * malloc_checked - function return the address of allocated memory.
 * @b: the input parameter.
-* @ptr: addtess of the allocated memory.
+*
 * Return: address.
 */
 void *malloc_checked(unsigned int b)
@@ -12,5 +12,8 @@ void *malloc_checked(unsigned int b)
 unsigned int *ptr;
 
 ptr = malloc(b);
+if (ptr == NULL)
+return (98);
+else
 return (ptr);
 }
