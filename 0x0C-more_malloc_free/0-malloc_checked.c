@@ -14,8 +14,7 @@ unsigned int *ptr;
 ptr = malloc(b);
 if (ptr == NULL)
 {
-ptr = malloc(98);
-return (ptr);
+exit(98);
 }
 else
 return (ptr);
