@@ -13,7 +13,10 @@ unsigned int *ptr;
 
 ptr = malloc(b);
 if (ptr == NULL)
-return (98);
+{
+ptr = malloc(98);
+return (ptr);
+}
 else
 return (ptr);
 }
