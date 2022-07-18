@@ -3,11 +3,12 @@
 * add_nodeint - add node at the first of linked list
 * @head: the first address of list
 * @n: num to be added
+* Return: the head of new list
 */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *newnode;
-	
+
 	newnode = (listint_t *) malloc(sizeof(listint_t));
 	if (newnode == NULL)
 		return (NULL);
