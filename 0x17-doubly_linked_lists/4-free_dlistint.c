@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
-* dlistint_len -print content form liked list
-* @h: header
-* Return: size of linked list
+* free_dlistint -free linked list
+* @head: header
+* Return: no return value
 */
 void free_dlistint(dlistint_t *head)
 {
