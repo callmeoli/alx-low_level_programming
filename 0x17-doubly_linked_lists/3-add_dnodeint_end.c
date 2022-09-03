@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
-/** 
+/**
  * add_dnodeint_end - add node at the end
  * @head: head of the list
  * @n: value
