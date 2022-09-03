@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "lists.h"
 /**
-* print_dlistint -print content form liked list
+* dlistint_len -print content form liked list
 * @h: header
 * Return: size of linked list
 */
