@@ -2,20 +2,30 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
-* free_dlistint -free linked list
+* get_dnodeint_at_index - get the value at index
 * @head: header
-* Return: no return value
+* @index: postion
+* Return: nth node
 */
-void free_dlistint(dlistint_t *head)
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 dlistint_t *current;
 dlistint_t *temp;
+unsigned int count = 0;
 
 current = head;
-while (current != NULL)
+while (current != NULL && count < index)
 {
 	temp = current;
 	current = current->next;
-	free(temp);
+	count++;
+}
+if (current == NULL)
+{
+	return (NULL);
+}
+else
+{
+	return (current)
 }
 }
