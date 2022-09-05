@@ -7,44 +7,39 @@
  * @index: The index, starting at 0
  * Return: 1 if it succeeded, -1 if it failed
  */
-int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	unsigned int count = 0;
-	dlistint_t *head;
-	dlistint_t *new;
+	dlistint_t *nhead;
 
-	head = *h;
-	if (!h)
-		return ();
-	if (*h == NULL && idx != 0)
-		return (NULL);
-	new = malloc(sizeof(dlistint_t));
-		if (new == NULL)
-			return (NULL);
-	new->n = n;
-	if (idx == 0)
+	nhead = *head;
+	if (head == NULL)
+		return (-1);
+	if (*head == NULL)
+		return (-1);
+	if (index == 0 && nhead != NULL)
 	{
-		if (*h)
-			head->prev = new;
-		*h = new;
-		new->prev = NULL;
-		new->next = head;
+		if (nhead->next)
+		{
+			*head = nhead->next;
+			nhead->next->prev = NULL;
+		}
+		free(nhead);
+	return (1);
 	}
 	count = 1;
-	while (count < idx)
+	while (count <= index)
 	{
-		head = head->next;
-		if (head == NULL)
+		nhead = nhead->next;
+		if (nhead == NULL)
 		{
-			free(new);
-			return (NULL);
+			return (-1);
 		}
 	count++;
 	}
-	new->next = head->next;
-	new->prev = head;
-	if (head->next)
-		head->next->prev = new;
-	head->next = new;
-	return (new);
+	nhead->prev->next = nhead->next;
+	nhead->next->prev = nhead->prev;
+	if (nhead != NULL)
+		free(nhead);
+	return (1);
 }
