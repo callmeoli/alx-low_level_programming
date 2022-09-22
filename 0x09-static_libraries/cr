@@ -1,4 +1,0 @@
-#!/bin/bash
-ar cr libmy.a *.o
-ranlib libmy.a
-
