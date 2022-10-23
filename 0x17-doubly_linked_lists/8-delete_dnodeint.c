@@ -1,45 +1,41 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
+
 /**
- * delete_dnodeint_at_index - delete node at a position
- * @head: The head of list
+ * delete_dnodeint_at_index - Delete the node at the specified index
+ * @head: The head of the list
  * @index: The index, starting at 0
- * Return: 1 if it succeeded, -1 if it failed
+ *
+ * Return: 1 if successful, -1 otherwise
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	unsigned int count = 0;
-	dlistint_t *nhead;
+	dlistint_t *actnode = *head;
+	unsigned int con;
 
-	nhead = *head;
-	if (head == NULL)
+	if (!head || !(*head))
 		return (-1);
-	if (*head == NULL)
-		return (-1);
-	if (index == 0 && nhead != NULL)
+
+	for (con = 0; con < index; con++)
 	{
-		if (nhead->next)
-		{
-			*head = nhead->next;
-			nhead->next->prev = NULL;
-		}
-		free(nhead);
-	return (1);
-	}
-	count = 1;
-	while (count <= index)
-	{
-		nhead = nhead->next;
-		if (nhead == NULL)
-		{
+		actnode = actnode->next;
+		if (actnode == NULL)
 			return (-1);
-		}
-	count++;
 	}
-	nhead->prev->next = nhead->next;
-	nhead->next->prev = nhead->prev;
-	if (nhead != NULL)
-		free(nhead);
+
+	if (index == 0)
+	{
+		if (actnode->next)
+			actnode->next->prev = NULL;
+		*head = actnode->next;
+	}
+	else
+	{
+		if (actnode->next)
+			actnode->next->prev = actnode->prev;
+		if (actnode->prev)
+			actnode->prev->next = actnode->next;
+	}
+
+	free(actnode);
 	return (1);
 }
